@@ -130,187 +130,475 @@
   },
   "suites": [
     {
-      "title": "smoke.spec.ts",
-      "file": "smoke.spec.ts",
+      "title": "hub.spec.ts",
+      "file": "hub.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Smoke Tests",
-          "file": "smoke.spec.ts",
+          "title": "AI Hub",
+          "file": "hub.spec.ts",
           "line": 7,
           "column": 6,
-          "specs": [
+          "specs": [],
+          "suites": [
             {
-              "title": "application loads successfully",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 3957,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-02-24T20:51:01.349Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4219922fea2e2bd3c691-f8064d0339e2d6e70c02",
-              "file": "smoke.spec.ts",
+              "title": "Personas API",
+              "file": "hub.spec.ts",
               "line": 8,
-              "column": 7
-            },
-            {
-              "title": "login page is accessible",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "column": 8,
+              "specs": [
                 {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "title": "returns list of personas",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 3900,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-02-24T20:51:01.329Z",
+                      "timeout": 60000,
                       "annotations": [],
-                      "attachments": []
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 268,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T20:51:17.339Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4219922fea2e2bd3c691-e6c9698f84319ecaafc4",
-              "file": "smoke.spec.ts",
-              "line": 18,
-              "column": 7
-            },
-            {
-              "title": "navigation to main routes works",
-              "ok": true,
-              "tags": [],
-              "tests": [
+                  "id": "f1dcaf3a79676f49b2e6-2469a4e4b18743dd85bb",
+                  "file": "hub.spec.ts",
+                  "line": 9,
+                  "column": 9
+                },
                 {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "title": "personas have required properties",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 3592,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-02-24T20:51:05.832Z",
+                      "timeout": 60000,
                       "annotations": [],
-                      "attachments": []
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 214,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T20:51:17.347Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4219922fea2e2bd3c691-f5df39439be1c4e3404a",
-              "file": "smoke.spec.ts",
-              "line": 31,
-              "column": 7
-            },
-            {
-              "title": "API health check",
-              "ok": true,
-              "tags": [],
-              "tests": [
+                  "id": "f1dcaf3a79676f49b2e6-068ea2350ffdc77cb2b3",
+                  "file": "hub.spec.ts",
+                  "line": 19,
+                  "column": 9
+                },
                 {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "title": "persona detect endpoint works",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 271,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-02-24T20:51:05.926Z",
+                      "timeout": 60000,
                       "annotations": [],
-                      "attachments": []
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 178,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"intent\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"confidence\": 0.33, \"persona\": {\"category\": \"Coding\", \"description\": \"Precision coding assistant. Meticulous, expert-level. Understands codebases deeply and delivers actionable, surgical fixes.\", \"emoji\": \"⚡\", \"id\": \"cursor\", \"name\": \"Cursor\"}, \"persona_id\": \"cursor\"}\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"intent\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"confidence\": 0.33, \"persona\": {\"category\": \"Coding\", \"description\": \"Precision coding assistant. Meticulous, expert-level. Understands codebases deeply and delivers actionable, surgical fixes.\", \"emoji\": \"⚡\", \"id\": \"cursor\", \"name\": \"Cursor\"}, \"persona_id\": \"cursor\"}\u001b[39m\n    at /app/frontend/e2e/tests/hub.spec.ts:40:20",
+                            "location": {
+                              "file": "/app/frontend/e2e/tests/hub.spec.ts",
+                              "column": 20,
+                              "line": 40
+                            },
+                            "snippet": "  38 |       \n  39 |       const data = await response.json();\n> 40 |       expect(data).toHaveProperty('intent');\n     |                    ^\n  41 |       expect(data).toHaveProperty('persona');\n  42 |     });\n  43 |"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/app/frontend/e2e/tests/hub.spec.ts",
+                                "column": 20,
+                                "line": 40
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"intent\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"confidence\": 0.33, \"persona\": {\"category\": \"Coding\", \"description\": \"Precision coding assistant. Meticulous, expert-level. Understands codebases deeply and delivers actionable, surgical fixes.\", \"emoji\": \"⚡\", \"id\": \"cursor\", \"name\": \"Cursor\"}, \"persona_id\": \"cursor\"}\u001b[39m\n\n  38 |       \n  39 |       const data = await response.json();\n> 40 |       expect(data).toHaveProperty('intent');\n     |                    ^\n  41 |       expect(data).toHaveProperty('persona');\n  42 |     });\n  43 |\n    at /app/frontend/e2e/tests/hub.spec.ts:40:20"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T20:51:17.626Z",
+                          "annotations": [],
+                          "attachments": [],
+                          "errorLocation": {
+                            "file": "/app/frontend/e2e/tests/hub.spec.ts",
+                            "column": 20,
+                            "line": 40
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4219922fea2e2bd3c691-13d1f0ede8185b308026",
-              "file": "smoke.spec.ts",
-              "line": 43,
-              "column": 7
-            },
-            {
-              "title": "public API endpoints are accessible",
-              "ok": true,
-              "tags": [],
-              "tests": [
+                  "id": "f1dcaf3a79676f49b2e6-580dc4e9e726a0aa52be",
+                  "file": "hub.spec.ts",
+                  "line": 32,
+                  "column": 9
+                },
                 {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "title": "persona apply requires authentication",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 217,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-02-24T20:51:06.207Z",
+                      "timeout": 60000,
                       "annotations": [],
-                      "attachments": []
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 83,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T20:51:17.642Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
-                  "status": "expected"
+                  "id": "f1dcaf3a79676f49b2e6-ad97662df1cc17153bff",
+                  "file": "hub.spec.ts",
+                  "line": 44,
+                  "column": 9
                 }
-              ],
-              "id": "4219922fea2e2bd3c691-b1417ad35009d606c7ea",
-              "file": "smoke.spec.ts",
-              "line": 52,
-              "column": 7
+              ]
+            },
+            {
+              "title": "Agents API",
+              "file": "hub.spec.ts",
+              "line": 53,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "returns list of agents",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 71,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T20:51:17.737Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f1dcaf3a79676f49b2e6-4b1db36e1155e5a8234f",
+                  "file": "hub.spec.ts",
+                  "line": 54,
+                  "column": 9
+                },
+                {
+                  "title": "agents have required properties",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 411,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T20:51:19.455Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f1dcaf3a79676f49b2e6-ae9e49870b7050276060",
+                  "file": "hub.spec.ts",
+                  "line": 64,
+                  "column": 9
+                },
+                {
+                  "title": "agents search works with query parameter",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 122,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T20:51:17.825Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f1dcaf3a79676f49b2e6-e219d9fb54de0d546fc2",
+                  "file": "hub.spec.ts",
+                  "line": 77,
+                  "column": 9
+                },
+                {
+                  "title": "agents filter by industry works",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 65,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T20:51:17.957Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f1dcaf3a79676f49b2e6-a6d21f8c68f715e218a2",
+                  "file": "hub.spec.ts",
+                  "line": 96,
+                  "column": 9
+                },
+                {
+                  "title": "agents filter by framework works",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 91,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T20:51:18.031Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f1dcaf3a79676f49b2e6-d1bcc176ed3f163df64d",
+                  "file": "hub.spec.ts",
+                  "line": 109,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Hub Page UI",
+              "file": "hub.spec.ts",
+              "line": 123,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "hub page loads correctly",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "failed",
+                          "duration": 31707,
+                          "error": {
+                            "message": "TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.",
+                            "stack": "TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.\n    at /app/frontend/e2e/tests/hub.spec.ts:126:18",
+                            "location": {
+                              "file": "/app/frontend/e2e/tests/hub.spec.ts",
+                              "column": 18,
+                              "line": 126
+                            },
+                            "snippet": "  124 |     test('hub page loads correctly', async ({ page }) => {\n  125 |       await page.goto('/hub');\n> 126 |       await page.waitForLoadState('networkidle');\n      |                  ^\n  127 |\n  128 |       // Page should be visible\n  129 |       await expect(page.locator('body')).toBeVisible();"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/app/frontend/e2e/tests/hub.spec.ts",
+                                "column": 18,
+                                "line": 126
+                              },
+                              "message": "TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.\n\n  124 |     test('hub page loads correctly', async ({ page }) => {\n  125 |       await page.goto('/hub');\n> 126 |       await page.waitForLoadState('networkidle');\n      |                  ^\n  127 |\n  128 |       // Page should be visible\n  129 |       await expect(page.locator('body')).toBeVisible();\n    at /app/frontend/e2e/tests/hub.spec.ts:126:18"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T20:51:18.129Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/app/frontend/e2e/test-results/hub-AI-Hub-Hub-Page-UI-hub-page-loads-correctly-chromium/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/app/frontend/e2e/test-results/hub-AI-Hub-Hub-Page-UI-hub-page-loads-correctly-chromium/error-context.md"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/app/frontend/e2e/tests/hub.spec.ts",
+                            "column": 18,
+                            "line": 126
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "f1dcaf3a79676f49b2e6-27a9c4b3b4310f1093aa",
+                  "file": "hub.spec.ts",
+                  "line": 124,
+                  "column": 9
+                },
+                {
+                  "title": "hub page displays tabs or sections",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 4008,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T20:51:19.949Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f1dcaf3a79676f49b2e6-fd653173789de7f03b09",
+                  "file": "hub.spec.ts",
+                  "line": 132,
+                  "column": 9
+                }
+              ]
             }
           ]
         }
@@ -319,11 +607,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-24T20:50:59.134Z",
-    "duration": 10396.155999999999,
-    "expected": 5,
+    "startTime": "2026-02-24T20:51:15.398Z",
+    "duration": 34867.589,
+    "expected": 9,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 2,
     "flaky": 0
   }
 }
