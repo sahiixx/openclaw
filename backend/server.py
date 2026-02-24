@@ -2073,12 +2073,19 @@ async def playground_chat(request: Request, body: PlaygroundRequest):
         import time
         start_time = time.time()
         
-        # Create LlmChat with custom parameters
+        # Parse model string (format: "provider/model_name" or just "model_name")
+        if "/" in body.model:
+            provider, model_name = body.model.split("/", 1)
+        else:
+            provider, model_name = "anthropic", body.model
+        
+        # Create LlmChat with proper initialization
+        # Note: temperature and max_tokens would need to be passed via with_model or a different method
         chat = LlmChat(
-            model=body.model,
-            temperature=body.temperature,
-            max_tokens=body.max_tokens
-        )
+            api_key=os.environ.get("EMERGENT_API_KEY", ""),
+            session_id=str(uuid.uuid4()),
+            system_message=f"You are a helpful AI assistant. Respond concisely."
+        ).with_model(provider, model_name)
         
         # Send message and get response
         response = chat.chat([UserMessage(content=body.prompt)])
