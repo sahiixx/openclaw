@@ -37,8 +37,10 @@ test.describe('AI Hub', () => {
       expect(response.ok()).toBeTruthy();
       
       const data = await response.json();
-      expect(data).toHaveProperty('intent');
+      // API returns persona_id and persona object with confidence
       expect(data).toHaveProperty('persona');
+      expect(data).toHaveProperty('persona_id');
+      expect(data).toHaveProperty('confidence');
     });
 
     test('persona apply requires authentication', async ({ request }) => {
