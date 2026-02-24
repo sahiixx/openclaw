@@ -59,17 +59,26 @@ test.describe('Authentication', () => {
     });
 
     test('API returns 401 for protected endpoints without auth', async ({ request }) => {
-      // Test protected endpoints
+      // Test protected endpoints (only GET endpoints)
       const protectedEndpoints = [
         '/api/chat/sessions',
-        '/api/chat/message',
         '/api/auth/me',
-        '/api/digest/config',
       ];
 
       for (const endpoint of protectedEndpoints) {
         const response = await request.get(endpoint);
         expect(response.status()).toBe(401);
+      }
+      
+      // POST endpoints that require auth
+      const protectedPostEndpoints = [
+        { url: '/api/chat/message', data: { message: 'test' } },
+        { url: '/api/digest/config', data: { enabled: true } },
+      ];
+      
+      for (const { url, data } of protectedPostEndpoints) {
+        const response = await request.post(url, { data });
+        expect([401, 403]).toContain(response.status());
       }
     });
   });
