@@ -8,6 +8,9 @@ export default defineConfig({
   // Test directory
   testDir: './e2e/tests',
 
+  // Global setup for authentication
+  globalSetup: './e2e/global-setup.ts',
+
   // Run tests in parallel
   fullyParallel: true,
 
@@ -46,6 +49,9 @@ export default defineConfig({
 
     // Timeout for navigation
     navigationTimeout: 30000,
+
+    // Use stored auth state if available
+    storageState: './e2e/.auth/user.json',
   },
 
   // Global timeout for each test
