@@ -10,14 +10,18 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 2
+    },
     "preserveOutput": "always",
     "projects": [
       {
         "outputDir": "/app/frontend/e2e/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 2
+        },
         "id": "chromium",
         "name": "chromium",
         "testDir": "/app/frontend/e2e/tests",
@@ -31,7 +35,9 @@
         "outputDir": "/app/frontend/e2e/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 2
+        },
         "id": "firefox",
         "name": "firefox",
         "testDir": "/app/frontend/e2e/tests",
@@ -45,7 +51,9 @@
         "outputDir": "/app/frontend/e2e/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 2
+        },
         "id": "webkit",
         "name": "webkit",
         "testDir": "/app/frontend/e2e/tests",
@@ -59,7 +67,9 @@
         "outputDir": "/app/frontend/e2e/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 2
+        },
         "id": "mobile-chrome",
         "name": "mobile-chrome",
         "testDir": "/app/frontend/e2e/tests",
@@ -73,7 +83,9 @@
         "outputDir": "/app/frontend/e2e/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 2
+        },
         "id": "mobile-safari",
         "name": "mobile-safari",
         "testDir": "/app/frontend/e2e/tests",
@@ -118,188 +130,6 @@
   },
   "suites": [
     {
-      "title": "auth.spec.ts",
-      "file": "auth.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Authentication",
-          "file": "auth.spec.ts",
-          "line": 7,
-          "column": 6,
-          "specs": [],
-          "suites": [
-            {
-              "title": "Login Page",
-              "file": "auth.spec.ts",
-              "line": 8,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "displays login page correctly",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "d748ac400d08b85935ef-dbd46109742f0533e5a2",
-                  "file": "auth.spec.ts",
-                  "line": 9,
-                  "column": 9
-                },
-                {
-                  "title": "Google sign-in button is present and clickable",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "d748ac400d08b85935ef-c6b87d8c901cf40dc7b2",
-                  "file": "auth.spec.ts",
-                  "line": 21,
-                  "column": 9
-                }
-              ]
-            },
-            {
-              "title": "Protected Routes",
-              "file": "auth.spec.ts",
-              "line": 38,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "unauthenticated users are redirected from protected pages",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "d748ac400d08b85935ef-8d8ce381cbeb5a4073b3",
-                  "file": "auth.spec.ts",
-                  "line": 39,
-                  "column": 9
-                },
-                {
-                  "title": "API returns 401 for protected endpoints without auth",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "d748ac400d08b85935ef-7c1a664c289473458afe",
-                  "file": "auth.spec.ts",
-                  "line": 61,
-                  "column": 9
-                }
-              ]
-            },
-            {
-              "title": "Session Management",
-              "file": "auth.spec.ts",
-              "line": 86,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "session endpoint returns proper error without valid session",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "d748ac400d08b85935ef-695a03c18089e7783753",
-                  "file": "auth.spec.ts",
-                  "line": 87,
-                  "column": 9
-                },
-                {
-                  "title": "logout endpoint works correctly",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "d748ac400d08b85935ef-73a8d36b87cbcb037f37",
-                  "file": "auth.spec.ts",
-                  "line": 95,
-                  "column": 9
-                },
-                {
-                  "title": "instance status endpoint is accessible",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "d748ac400d08b85935ef-f5c8cc2f389b53fe0c9c",
-                  "file": "auth.spec.ts",
-                  "line": 103,
-                  "column": 9
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "title": "authenticated-features.spec.ts",
       "file": "authenticated-features.spec.ts",
       "column": 0,
@@ -314,82 +144,6 @@
           "specs": [],
           "suites": [
             {
-              "title": "User Profile",
-              "file": "authenticated-features.spec.ts",
-              "line": 30,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "can fetch current user info",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8bfa4fbc25c7d3af7ca6-3a1263f53a818a913a22",
-                  "file": "authenticated-features.spec.ts",
-                  "line": 31,
-                  "column": 9
-                }
-              ]
-            },
-            {
-              "title": "Chat Features",
-              "file": "authenticated-features.spec.ts",
-              "line": 41,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "can create a new chat session",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8bfa4fbc25c7d3af7ca6-e6971d8d093cff2d43f8",
-                  "file": "authenticated-features.spec.ts",
-                  "line": 42,
-                  "column": 9
-                },
-                {
-                  "title": "can list chat sessions",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8bfa4fbc25c7d3af7ca6-c57e36d8e0db857f8e73",
-                  "file": "authenticated-features.spec.ts",
-                  "line": 54,
-                  "column": 9
-                }
-              ]
-            },
-            {
               "title": "Hub Features",
               "file": "authenticated-features.spec.ts",
               "line": 64,
@@ -402,11 +156,45 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "Skipping: No valid authentication available",
+                          "location": {
+                            "file": "/app/frontend/e2e/tests/authenticated-features.spec.ts",
+                            "line": 28,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "expectedStatus": "skipped",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:58.057Z",
+                          "annotations": [
+                            {
+                              "type": "skip",
+                              "description": "Skipping: No valid authentication available",
+                              "location": {
+                                "file": "/app/frontend/e2e/tests/authenticated-features.spec.ts",
+                                "line": 28,
+                                "column": 8
+                              }
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -430,11 +218,45 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "Skipping: No valid authentication available",
+                          "location": {
+                            "file": "/app/frontend/e2e/tests/authenticated-features.spec.ts",
+                            "line": 28,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "expectedStatus": "skipped",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:58.175Z",
+                          "annotations": [
+                            {
+                              "type": "skip",
+                              "description": "Skipping: No valid authentication available",
+                              "location": {
+                                "file": "/app/frontend/e2e/tests/authenticated-features.spec.ts",
+                                "line": 28,
+                                "column": 8
+                              }
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -450,495 +272,51 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "Skipping: No valid authentication available",
+                          "location": {
+                            "file": "/app/frontend/e2e/tests/authenticated-features.spec.ts",
+                            "line": 28,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "expectedStatus": "skipped",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:58.118Z",
+                          "annotations": [
+                            {
+                              "type": "skip",
+                              "description": "Skipping: No valid authentication available",
+                              "location": {
+                                "file": "/app/frontend/e2e/tests/authenticated-features.spec.ts",
+                                "line": 28,
+                                "column": 8
+                              }
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
                   "id": "8bfa4fbc25c7d3af7ca6-f865fd3cc959f5cda875",
                   "file": "authenticated-features.spec.ts",
                   "line": 84,
-                  "column": 9
-                }
-              ]
-            },
-            {
-              "title": "Digest Features",
-              "file": "authenticated-features.spec.ts",
-              "line": 100,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "can get digest config",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8bfa4fbc25c7d3af7ca6-094294860ebb7ccd108b",
-                  "file": "authenticated-features.spec.ts",
-                  "line": 101,
-                  "column": 9
-                },
-                {
-                  "title": "can update digest config",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8bfa4fbc25c7d3af7ca6-fc7b250b825ffdf220bf",
-                  "file": "authenticated-features.spec.ts",
-                  "line": 109,
-                  "column": 9
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "authenticated-flows.spec.ts",
-      "file": "authenticated-flows.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Authenticated User Flows",
-          "file": "authenticated-flows.spec.ts",
-          "line": 9,
-          "column": 6,
-          "specs": [],
-          "suites": [
-            {
-              "title": "Session Simulation",
-              "file": "authenticated-flows.spec.ts",
-              "line": 10,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "login page has authentication options",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6681cfc87014bf06c23f-f761ca412d4f476650e2",
-                  "file": "authenticated-flows.spec.ts",
-                  "line": 11,
-                  "column": 9
-                },
-                {
-                  "title": "protected routes handle unauthenticated access",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6681cfc87014bf06c23f-edd92dad8b21586eb6fc",
-                  "file": "authenticated-flows.spec.ts",
-                  "line": 27,
-                  "column": 9
-                }
-              ]
-            },
-            {
-              "title": "API Authentication Checks",
-              "file": "authenticated-flows.spec.ts",
-              "line": 58,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "all protected endpoints return 401 without auth",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6681cfc87014bf06c23f-308493e858694b57c495",
-                  "file": "authenticated-flows.spec.ts",
-                  "line": 59,
-                  "column": 9
-                },
-                {
-                  "title": "public endpoints work without auth",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6681cfc87014bf06c23f-9697b29c8400c3c841f6",
-                  "file": "authenticated-flows.spec.ts",
-                  "line": 83,
-                  "column": 9
-                }
-              ]
-            },
-            {
-              "title": "Expected Authenticated Behavior (Documentation)",
-              "file": "authenticated-flows.spec.ts",
-              "line": 100,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "document expected authenticated user capabilities",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6681cfc87014bf06c23f-95987c71cc9869b8aed8",
-                  "file": "authenticated-flows.spec.ts",
-                  "line": 129,
-                  "column": 9
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "chat.spec.ts",
-      "file": "chat.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Chat",
-          "file": "chat.spec.ts",
-          "line": 7,
-          "column": 6,
-          "specs": [],
-          "suites": [
-            {
-              "title": "Chat API - Unauthenticated",
-              "file": "chat.spec.ts",
-              "line": 8,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "POST /chat/message requires authentication",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6dac514d5d837ca37b9e-eca8406a8dcc4f072982",
-                  "file": "chat.spec.ts",
-                  "line": 9,
-                  "column": 9
-                },
-                {
-                  "title": "GET /chat/sessions requires authentication",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6dac514d5d837ca37b9e-f5856d6e669e248abfcf",
-                  "file": "chat.spec.ts",
-                  "line": 17,
-                  "column": 9
-                },
-                {
-                  "title": "GET /chat/history requires authentication",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6dac514d5d837ca37b9e-b867c80f3524c616d660",
-                  "file": "chat.spec.ts",
-                  "line": 22,
-                  "column": 9
-                },
-                {
-                  "title": "DELETE /chat/session requires authentication",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6dac514d5d837ca37b9e-5fe344bd4efc465c235d",
-                  "file": "chat.spec.ts",
-                  "line": 27,
-                  "column": 9
-                }
-              ]
-            },
-            {
-              "title": "Chat Page UI",
-              "file": "chat.spec.ts",
-              "line": 33,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "chat page redirects unauthenticated users",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6dac514d5d837ca37b9e-456511bf8093fa63aa3d",
-                  "file": "chat.spec.ts",
-                  "line": 34,
-                  "column": 9
-                }
-              ]
-            },
-            {
-              "title": "Chat API - Request Validation",
-              "file": "chat.spec.ts",
-              "line": 53,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "empty message returns error",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6dac514d5d837ca37b9e-dcc77429a5c0a8f6c5ab",
-                  "file": "chat.spec.ts",
-                  "line": 54,
-                  "column": 9
-                },
-                {
-                  "title": "malformed request is handled gracefully",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "6dac514d5d837ca37b9e-aec43081891077be82a1",
-                  "file": "chat.spec.ts",
-                  "line": 63,
-                  "column": 9
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "digest.spec.ts",
-      "file": "digest.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Daily Digest",
-          "file": "digest.spec.ts",
-          "line": 7,
-          "column": 6,
-          "specs": [],
-          "suites": [
-            {
-              "title": "Protected Endpoints",
-              "file": "digest.spec.ts",
-              "line": 8,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "GET /digest/config requires authentication",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "d0211ee6f8b93cb5cb5e-c69aa3692166ad8ce055",
-                  "file": "digest.spec.ts",
-                  "line": 9,
-                  "column": 9
-                },
-                {
-                  "title": "POST /digest/config requires authentication",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "d0211ee6f8b93cb5cb5e-4440deaacb4df69c1e1b",
-                  "file": "digest.spec.ts",
-                  "line": 14,
-                  "column": 9
-                },
-                {
-                  "title": "POST /digest/trigger requires authentication",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "d0211ee6f8b93cb5cb5e-cc6ff5d314b8dff1f11b",
-                  "file": "digest.spec.ts",
-                  "line": 24,
-                  "column": 9
-                },
-                {
-                  "title": "GET /digest/history requires authentication",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "d0211ee6f8b93cb5cb5e-a83b1d3722ce3d499ee7",
-                  "file": "digest.spec.ts",
-                  "line": 29,
                   "column": 9
                 }
               ]
@@ -978,8 +356,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 305,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:58.171Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "f1dcaf3a79676f49b2e6-2469a4e4b18743dd85bb",
@@ -998,8 +390,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 316,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:58.273Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "f1dcaf3a79676f49b2e6-068ea2350ffdc77cb2b3",
@@ -1018,8 +424,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 139,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:58.522Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "f1dcaf3a79676f49b2e6-580dc4e9e726a0aa52be",
@@ -1038,8 +458,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 287,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:58.618Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "f1dcaf3a79676f49b2e6-ad97662df1cc17153bff",
@@ -1066,8 +500,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 167,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:58.676Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "f1dcaf3a79676f49b2e6-4b1db36e1155e5a8234f",
@@ -1086,8 +534,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 124,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:58.858Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "f1dcaf3a79676f49b2e6-ae9e49870b7050276060",
@@ -1106,8 +568,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 81,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:58.914Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "f1dcaf3a79676f49b2e6-e219d9fb54de0d546fc2",
@@ -1126,8 +602,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 117,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:58.992Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "f1dcaf3a79676f49b2e6-a6d21f8c68f715e218a2",
@@ -1146,8 +636,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 112,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:59.020Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "f1dcaf3a79676f49b2e6-d1bcc176ed3f163df64d",
@@ -1174,8 +678,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2260,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:59.115Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "f1dcaf3a79676f49b2e6-27a9c4b3b4310f1093aa",
@@ -1194,8 +712,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 3756,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:56:59.143Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "f1dcaf3a79676f49b2e6-fd653173789de7f03b09",
@@ -1240,8 +772,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 674,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:57:01.716Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "50ac0d99e27d2c746854-dcfdb17012fd4092936e",
@@ -1260,8 +806,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 343,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:57:02.417Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "50ac0d99e27d2c746854-d71c937ad72859108bc4",
@@ -1288,8 +848,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 93,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:57:02.768Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "50ac0d99e27d2c746854-09829afb6b29f5e8e7f4",
@@ -1308,8 +882,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 150,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:57:02.871Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "50ac0d99e27d2c746854-01a81e9fea8935608325",
@@ -1328,8 +916,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 129,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:57:03.028Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "50ac0d99e27d2c746854-d42943cd3d6546aabfd7",
@@ -1356,8 +958,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 93,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:57:03.164Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "50ac0d99e27d2c746854-7ce5881e0d04405cbcff",
@@ -1384,8 +1000,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
+                          "status": "passed",
+                          "duration": 514,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:57:03.216Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "50ac0d99e27d2c746854-22a4804e8741ab84af0b",
@@ -1404,8 +1034,22 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 75,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:57:03.263Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "50ac0d99e27d2c746854-e663801875ca19b0b762",
@@ -1434,74 +1078,6 @@
           "specs": [],
           "suites": [
             {
-              "title": "Page Load",
-              "file": "setup-page.spec.ts",
-              "line": 8,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "setup page loads correctly",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8dda35d0b921c7e22c28-45507dcc6a583394a8be",
-                  "file": "setup-page.spec.ts",
-                  "line": 9,
-                  "column": 9
-                },
-                {
-                  "title": "page has proper title",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8dda35d0b921c7e22c28-65c9c8d34d51e6be249f",
-                  "file": "setup-page.spec.ts",
-                  "line": 16,
-                  "column": 9
-                },
-                {
-                  "title": "page displays main content",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8dda35d0b921c7e22c28-4935d4f8d4820dc91fca",
-                  "file": "setup-page.spec.ts",
-                  "line": 24,
-                  "column": 9
-                }
-              ]
-            },
-            {
               "title": "Navigation",
               "file": "setup-page.spec.ts",
               "line": 34,
@@ -1518,149 +1094,27 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2729,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T21:57:03.347Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "8dda35d0b921c7e22c28-53fdad8283d6a3bec109",
                   "file": "setup-page.spec.ts",
                   "line": 35,
-                  "column": 9
-                },
-                {
-                  "title": "can navigate to chat from setup page",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8dda35d0b921c7e22c28-76275899147162aa59c2",
-                  "file": "setup-page.spec.ts",
-                  "line": 57,
-                  "column": 9
-                }
-              ]
-            },
-            {
-              "title": "UI Elements",
-              "file": "setup-page.spec.ts",
-              "line": 83,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "page has interactive elements",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8dda35d0b921c7e22c28-bb77186a1c6d5796f725",
-                  "file": "setup-page.spec.ts",
-                  "line": 84,
-                  "column": 9
-                },
-                {
-                  "title": "page displays status information",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8dda35d0b921c7e22c28-0c0dd3da97abd29d40a8",
-                  "file": "setup-page.spec.ts",
-                  "line": 98,
-                  "column": 9
-                }
-              ]
-            },
-            {
-              "title": "Responsive Design",
-              "file": "setup-page.spec.ts",
-              "line": 116,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "page renders correctly on mobile viewport",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8dda35d0b921c7e22c28-1c83a4d5085c947e4b13",
-                  "file": "setup-page.spec.ts",
-                  "line": 117,
-                  "column": 9
-                },
-                {
-                  "title": "page renders correctly on tablet viewport",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8dda35d0b921c7e22c28-e69ea528957175f19647",
-                  "file": "setup-page.spec.ts",
-                  "line": 131,
-                  "column": 9
-                },
-                {
-                  "title": "page renders correctly on desktop viewport",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "8dda35d0b921c7e22c28-ccc61a3b77334068263d",
-                  "file": "setup-page.spec.ts",
-                  "line": 139,
                   "column": 9
                 }
               ]
@@ -1693,8 +1147,22 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2615,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T21:57:03.740Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "4219922fea2e2bd3c691-f8064d0339e2d6e70c02",
@@ -1713,8 +1181,22 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3352,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T21:57:06.112Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "4219922fea2e2bd3c691-e6c9698f84319ecaafc4",
@@ -1733,8 +1215,22 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 4105,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T21:57:06.365Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "4219922fea2e2bd3c691-f5df39439be1c4e3404a",
@@ -1753,8 +1249,22 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 96,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T21:57:09.513Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "4219922fea2e2bd3c691-13d1f0ede8185b308026",
@@ -1773,8 +1283,22 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 162,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T21:57:09.617Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "4219922fea2e2bd3c691-b1417ad35009d606c7ea",
@@ -1789,10 +1313,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-24T21:52:35.896Z",
-    "duration": 38.011000000000195,
-    "expected": 0,
-    "skipped": 65,
+    "startTime": "2026-02-24T21:56:56.184Z",
+    "duration": 14391.682,
+    "expected": 25,
+    "skipped": 3,
     "unexpected": 0,
     "flaky": 0
   }
