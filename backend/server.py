@@ -2038,8 +2038,18 @@ async def quick_chat(request: Request, body: QuickChatRequest):
     user = await require_auth(request)
     
     try:
-        # Create LlmChat instance with selected model
-        chat = LlmChat(model=body.model)
+        # Parse model string (format: "provider/model_name" or just "model_name")
+        if "/" in body.model:
+            provider, model_name = body.model.split("/", 1)
+        else:
+            provider, model_name = "anthropic", body.model
+        
+        # Create LlmChat instance with proper initialization
+        chat = LlmChat(
+            api_key=os.environ.get("EMERGENT_API_KEY", ""),
+            session_id=str(uuid.uuid4()),
+            system_message="You are a helpful AI assistant."
+        ).with_model(provider, model_name)
         
         # Send message and get response
         response = chat.chat([UserMessage(content=body.message)])
