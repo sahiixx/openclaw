@@ -71,7 +71,9 @@
     "e2e:firefox": "playwright test --project=firefox",
     "e2e:webkit": "playwright test --project=webkit",
     "e2e:report": "playwright show-report e2e/reports/html",
-    "e2e:install": "playwright install"
+    "e2e:install": "playwright install",
+    "e2e:auth-setup": "npx ts-node e2e/scripts/auth-setup.ts",
+    "e2e:auth-tests": "playwright test --grep 'Authenticated Features'"
   },
   "browserslist": {
     "production": [
