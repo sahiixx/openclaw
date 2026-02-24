@@ -1,0 +1,14 @@
+# Authentication State
+# This directory contains browser authentication state for E2E tests
+
+# SECURITY WARNING:
+# Do NOT commit actual session tokens to version control!
+# The user.json file is gitignored by default.
+
+# To set up authenticated tests:
+# 1. Run: yarn e2e:auth-setup (interactive browser login)
+# 2. Or set TEST_SESSION_TOKEN environment variable
+
+# For CI/CD:
+# Add TEST_SESSION_TOKEN as a GitHub secret
+*.json
