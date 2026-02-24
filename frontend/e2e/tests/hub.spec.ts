@@ -125,7 +125,7 @@ test.describe('AI Hub', () => {
   test.describe('Hub Page UI', () => {
     test('hub page loads correctly', async ({ page }) => {
       await page.goto('/hub');
-      await page.waitForLoadState('networkidle');
+      await page.waitForLoadState('domcontentloaded');
 
       // Page should be visible
       await expect(page.locator('body')).toBeVisible();
@@ -133,7 +133,7 @@ test.describe('AI Hub', () => {
 
     test('hub page displays tabs or sections', async ({ page }) => {
       await page.goto('/hub');
-      await page.waitForLoadState('networkidle');
+      await page.waitForLoadState('domcontentloaded');
 
       // Look for tab elements or section headers
       const pageContent = await page.textContent('body');
