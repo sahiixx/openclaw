@@ -1,0 +1,17 @@
+# E2E Test Results and Artifacts
+
+# Reports
+e2e/reports/
+e2e/test-results/
+
+# Screenshots
+e2e/screenshots/
+
+# Videos
+e2e/videos/
+
+# Traces
+e2e/traces/
+
+# Playwright state
+.playwright/
