@@ -692,6 +692,9 @@ export default function SetupPage() {
                       <SelectItem value="emergent" className="focus:bg-[#1f2022]">
                         Emergent (Recommended - No key needed)
                       </SelectItem>
+                      <SelectItem value="groq" className="focus:bg-[#1f2022]">
+                        ⚡ Groq (Lightning Fast) - Llama 3.3 70B
+                      </SelectItem>
                       <SelectItem value="anthropic" className="focus:bg-[#1f2022]">
                         Anthropic (Claude) - Bring your own key
                       </SelectItem>
@@ -703,6 +706,11 @@ export default function SetupPage() {
                   {provider === 'emergent' && (
                     <p className="text-xs text-[#22c55e]">
                       Pre-configured with Claude Opus 4.5 and GPT-5.2 - no API key needed
+                    </p>
+                  )}
+                  {provider === 'groq' && (
+                    <p className="text-xs text-[#F55036]">
+                      Ultra-fast inference with Llama 3.3 70B, Mixtral 8x7B - get key at console.groq.com
                     </p>
                   )}
                 </div>
@@ -720,7 +728,7 @@ export default function SetupPage() {
                         onChange={(e) => setApiKey(e.target.value)}
                         disabled={loading}
                         className="pr-20 tracking-wider bg-[#0f0f10] border-[#1f2022] focus-visible:ring-[#FF4500] focus-visible:ring-offset-0 h-11 api-key-input"
-                        placeholder={provider === 'openai' ? 'sk-...' : 'sk-ant-...'}
+                        placeholder={provider === 'openai' ? 'sk-...' : provider === 'groq' ? 'gsk_...' : 'sk-ant-...'}
                         aria-describedby="apiKeyHelp"
                       />
                       <Button
