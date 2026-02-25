@@ -720,6 +720,96 @@ export default function HubPage() {
               </div>
             </motion.div>
           </TabsContent>
+
+          {/* ===== RESOURCES TAB ===== */}
+          <TabsContent value="resources">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2 }}
+            >
+              <p className="text-zinc-500 text-sm mb-6">
+                Discover public APIs and LLM app templates. Inspired by{' '}
+                <a href="https://github.com/public-apis/public-apis" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-zinc-200 underline underline-offset-2">public-apis</a> and{' '}
+                <a href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-zinc-200 underline underline-offset-2">awesome-llm-apps</a>.
+              </p>
+
+              {resourcesLoading ? (
+                <div className="flex justify-center py-12">
+                  <Loader2 className="w-8 h-8 animate-spin text-zinc-500" />
+                </div>
+              ) : (
+                <div className="space-y-8">
+                  {/* LLM App Templates */}
+                  <div>
+                    <h3 className="text-lg font-semibold text-zinc-200 mb-4 flex items-center gap-2">
+                      <Sparkles className="w-5 h-5 text-[#FF4500]" />
+                      LLM App Templates
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                      {templates.map((template) => (
+                        <Card key={template.id} className="bg-[#141416] border-[#1f2022] hover:border-[#FF4500]/50 transition-colors">
+                          <CardHeader className="pb-2">
+                            <CardTitle className="text-base text-zinc-200">{template.name}</CardTitle>
+                            <CardDescription className="text-xs text-zinc-500 line-clamp-2">{template.description}</CardDescription>
+                          </CardHeader>
+                          <CardContent className="pt-0">
+                            <div className="flex flex-wrap gap-1 mb-3">
+                              {template.stack.slice(0, 3).map((tech) => (
+                                <Badge key={tech} variant="outline" className="border-zinc-700 text-zinc-400 text-xs">{tech}</Badge>
+                              ))}
+                            </div>
+                            <Badge className={`text-xs ${
+                              template.difficulty === 'beginner' ? 'bg-green-900/50 text-green-300' :
+                              template.difficulty === 'intermediate' ? 'bg-yellow-900/50 text-yellow-300' :
+                              template.difficulty === 'advanced' ? 'bg-orange-900/50 text-orange-300' :
+                              'bg-red-900/50 text-red-300'
+                            }`}>{template.difficulty}</Badge>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Public APIs by Category */}
+                  <div>
+                    <h3 className="text-lg font-semibold text-zinc-200 mb-4 flex items-center gap-2">
+                      <ExternalLink className="w-5 h-5 text-[#FF4500]" />
+                      Public APIs Directory
+                    </h3>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                      {apiCategories.map((category) => (
+                        <Card key={category.id} className="bg-[#141416] border-[#1f2022]">
+                          <CardHeader className="pb-2">
+                            <CardTitle className="text-base text-zinc-200">{category.name}</CardTitle>
+                          </CardHeader>
+                          <CardContent className="pt-0">
+                            <div className="space-y-2">
+                              {category.apis.slice(0, 5).map((api) => (
+                                <div key={api.name} className="flex items-center justify-between py-1.5 border-b border-zinc-800/50 last:border-0">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-sm text-zinc-300">{api.name}</span>
+                                    <Badge variant="outline" className={`text-xs ${
+                                      api.auth === 'none' ? 'border-green-700 text-green-400' :
+                                      api.auth === 'apiKey' ? 'border-yellow-700 text-yellow-400' :
+                                      'border-blue-700 text-blue-400'
+                                    }`}>{api.auth}</Badge>
+                                  </div>
+                                  <a href={api.url} target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-[#FF4500]">
+                                    <ExternalLink className="w-4 h-4" />
+                                  </a>
+                                </div>
+                              ))}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </motion.div>
+          </TabsContent>
         </Tabs>
       </div>
 
