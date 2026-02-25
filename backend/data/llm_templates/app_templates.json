@@ -1,0 +1,81 @@
+{
+  "templates": [
+    {
+      "id": "rag-chatbot",
+      "name": "RAG Chatbot",
+      "description": "Build a chatbot that answers questions from your documents using Retrieval Augmented Generation",
+      "category": "chatbot",
+      "difficulty": "intermediate",
+      "stack": ["Python", "FastAPI", "Pinecone/Qdrant", "OpenAI/Groq"],
+      "features": ["Document upload", "Vector search", "Contextual answers", "Source citations"]
+    },
+    {
+      "id": "ai-agent",
+      "name": "AI Agent with Tools",
+      "description": "Create an autonomous AI agent that can use tools to accomplish tasks",
+      "category": "agent",
+      "difficulty": "advanced",
+      "stack": ["Python", "LangChain/CrewAI", "OpenAI/Claude"],
+      "features": ["Tool calling", "Memory", "Planning", "Multi-step reasoning"]
+    },
+    {
+      "id": "voice-assistant",
+      "name": "Voice AI Assistant",
+      "description": "Build a voice-enabled AI assistant with speech-to-text and text-to-speech",
+      "category": "voice",
+      "difficulty": "intermediate",
+      "stack": ["Python", "Whisper", "ElevenLabs", "OpenAI"],
+      "features": ["Voice input", "AI responses", "Voice output", "Real-time"]
+    },
+    {
+      "id": "code-assistant",
+      "name": "Code Assistant",
+      "description": "AI-powered coding assistant that helps write, review, and debug code",
+      "category": "development",
+      "difficulty": "advanced",
+      "stack": ["Python", "Claude/GPT", "Tree-sitter", "LSP"],
+      "features": ["Code generation", "Code review", "Bug detection", "Refactoring"]
+    },
+    {
+      "id": "multi-agent-team",
+      "name": "Multi-Agent Team",
+      "description": "Create a team of AI agents that collaborate to solve complex problems",
+      "category": "agent",
+      "difficulty": "expert",
+      "stack": ["Python", "CrewAI/AutoGen", "Multiple LLMs"],
+      "features": ["Agent roles", "Collaboration", "Task delegation", "Consensus"]
+    },
+    {
+      "id": "research-agent",
+      "name": "Research Agent",
+      "description": "AI agent that searches the web, analyzes sources, and writes reports",
+      "category": "research",
+      "difficulty": "intermediate",
+      "stack": ["Python", "Perplexity/Tavily", "OpenAI"],
+      "features": ["Web search", "Source analysis", "Report generation", "Citations"]
+    },
+    {
+      "id": "data-analyst",
+      "name": "AI Data Analyst",
+      "description": "AI assistant that analyzes data, creates visualizations, and generates insights",
+      "category": "analytics",
+      "difficulty": "intermediate",
+      "stack": ["Python", "Pandas", "Plotly", "OpenAI"],
+      "features": ["Data analysis", "Visualizations", "Natural language queries", "Insights"]
+    },
+    {
+      "id": "image-generator",
+      "name": "AI Image Generator",
+      "description": "Generate and edit images using AI models like DALL-E or Stable Diffusion",
+      "category": "creative",
+      "difficulty": "beginner",
+      "stack": ["Python", "DALL-E/SD", "Pillow"],
+      "features": ["Text-to-image", "Image editing", "Style transfer", "Upscaling"]
+    }
+  ],
+  "meta": {
+    "source": "Inspired by Shubhamsaboo/awesome-llm-apps",
+    "version": "1.0",
+    "updated": "2026-02-25"
+  }
+}

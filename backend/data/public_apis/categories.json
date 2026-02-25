@@ -1,0 +1,83 @@
+{
+  "categories": [
+    {
+      "id": "ai-ml",
+      "name": "AI & Machine Learning",
+      "icon": "brain",
+      "apis": [
+        {"name": "OpenAI", "url": "https://platform.openai.com/", "auth": "apiKey", "description": "GPT-5, GPT-4, DALL-E, Whisper"},
+        {"name": "Anthropic", "url": "https://www.anthropic.com/", "auth": "apiKey", "description": "Claude Opus 4.5, Sonnet"},
+        {"name": "Google AI", "url": "https://ai.google.dev/", "auth": "apiKey", "description": "Gemini 3 Pro, PaLM"},
+        {"name": "Groq", "url": "https://console.groq.com/", "auth": "apiKey", "description": "Ultra-fast Llama 3.3, Mixtral"},
+        {"name": "Hugging Face", "url": "https://huggingface.co/", "auth": "apiKey", "description": "Open-source models hub"},
+        {"name": "Replicate", "url": "https://replicate.com/", "auth": "apiKey", "description": "Run ML models in cloud"},
+        {"name": "Stability AI", "url": "https://stability.ai/", "auth": "apiKey", "description": "Stable Diffusion, image gen"}
+      ]
+    },
+    {
+      "id": "development",
+      "name": "Development Tools",
+      "icon": "code",
+      "apis": [
+        {"name": "GitHub", "url": "https://docs.github.com/en/rest", "auth": "OAuth", "description": "Repos, issues, PRs"},
+        {"name": "GitLab", "url": "https://docs.gitlab.com/ee/api/", "auth": "OAuth", "description": "CI/CD, repos, pipelines"},
+        {"name": "Vercel", "url": "https://vercel.com/docs/rest-api", "auth": "apiKey", "description": "Deployments, domains"},
+        {"name": "Netlify", "url": "https://docs.netlify.com/api/", "auth": "apiKey", "description": "Sites, builds, functions"},
+        {"name": "Railway", "url": "https://docs.railway.app/", "auth": "apiKey", "description": "Infrastructure platform"}
+      ]
+    },
+    {
+      "id": "data",
+      "name": "Data & Analytics",
+      "icon": "database",
+      "apis": [
+        {"name": "MongoDB Atlas", "url": "https://www.mongodb.com/docs/atlas/api/", "auth": "apiKey", "description": "Cloud database"},
+        {"name": "Supabase", "url": "https://supabase.com/docs/", "auth": "apiKey", "description": "Postgres + Auth + Storage"},
+        {"name": "Firebase", "url": "https://firebase.google.com/docs/", "auth": "apiKey", "description": "Google's app platform"},
+        {"name": "Pinecone", "url": "https://www.pinecone.io/", "auth": "apiKey", "description": "Vector database"},
+        {"name": "Qdrant", "url": "https://qdrant.tech/", "auth": "apiKey", "description": "Vector similarity search"}
+      ]
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "icon": "message-circle",
+      "apis": [
+        {"name": "Twilio", "url": "https://www.twilio.com/docs/", "auth": "apiKey", "description": "SMS, Voice, Video"},
+        {"name": "SendGrid", "url": "https://docs.sendgrid.com/", "auth": "apiKey", "description": "Email delivery"},
+        {"name": "Telegram Bot", "url": "https://core.telegram.org/bots/api", "auth": "apiKey", "description": "Bot messaging"},
+        {"name": "Discord", "url": "https://discord.com/developers/docs", "auth": "OAuth", "description": "Bot & webhooks"},
+        {"name": "Slack", "url": "https://api.slack.com/", "auth": "OAuth", "description": "Workspace messaging"}
+      ]
+    },
+    {
+      "id": "finance",
+      "name": "Finance & Payments",
+      "icon": "credit-card",
+      "apis": [
+        {"name": "Stripe", "url": "https://stripe.com/docs/api", "auth": "apiKey", "description": "Payments, subscriptions"},
+        {"name": "PayPal", "url": "https://developer.paypal.com/", "auth": "OAuth", "description": "Online payments"},
+        {"name": "Plaid", "url": "https://plaid.com/docs/", "auth": "apiKey", "description": "Banking data"},
+        {"name": "Alpha Vantage", "url": "https://www.alphavantage.co/", "auth": "apiKey", "description": "Stock market data"},
+        {"name": "CoinGecko", "url": "https://www.coingecko.com/api/", "auth": "none", "description": "Crypto prices"}
+      ]
+    },
+    {
+      "id": "media",
+      "name": "Media & Content",
+      "icon": "image",
+      "apis": [
+        {"name": "Unsplash", "url": "https://unsplash.com/developers", "auth": "apiKey", "description": "Free images"},
+        {"name": "Pexels", "url": "https://www.pexels.com/api/", "auth": "apiKey", "description": "Stock photos & videos"},
+        {"name": "Cloudinary", "url": "https://cloudinary.com/documentation", "auth": "apiKey", "description": "Image/video management"},
+        {"name": "ElevenLabs", "url": "https://elevenlabs.io/docs", "auth": "apiKey", "description": "AI voice synthesis"},
+        {"name": "AssemblyAI", "url": "https://www.assemblyai.com/docs", "auth": "apiKey", "description": "Speech-to-text"}
+      ]
+    }
+  ],
+  "meta": {
+    "source": "Inspired by public-apis/public-apis",
+    "version": "1.0",
+    "updated": "2026-02-25"
+  }
+}
