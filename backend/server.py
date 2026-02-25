@@ -2159,6 +2159,173 @@ async def playground_chat(request: Request, body: PlaygroundRequest):
         raise HTTPException(status_code=500, detail=f"Playground failed: {str(e)}")
 
 
+# ============== Resource Hub APIs ==============
+# Inspired by awesome-llm-apps, system-prompts, public-apis repos
+
+DATA_DIR = ROOT_DIR / "data"
+
+@api_router.get("/resources/prompts")
+async def get_system_prompts():
+    """Get available system prompts for Neo personas."""
+    prompts_file = DATA_DIR / "system_prompts" / "neo_prompts.json"
+    if prompts_file.exists():
+        with open(prompts_file) as f:
+            return json.load(f)
+    return {"personas": {}, "meta": {}}
+
+
+@api_router.get("/resources/prompts/{persona_id}")
+async def get_persona_prompt(persona_id: str):
+    """Get system prompt for a specific persona."""
+    prompts_file = DATA_DIR / "system_prompts" / "neo_prompts.json"
+    if prompts_file.exists():
+        with open(prompts_file) as f:
+            data = json.load(f)
+            if persona_id in data.get("personas", {}):
+                return data["personas"][persona_id]
+    raise HTTPException(status_code=404, detail="Persona not found")
+
+
+@api_router.get("/resources/apis")
+async def get_public_apis():
+    """Get directory of public APIs organized by category."""
+    apis_file = DATA_DIR / "public_apis" / "categories.json"
+    if apis_file.exists():
+        with open(apis_file) as f:
+            return json.load(f)
+    return {"categories": [], "meta": {}}
+
+
+@api_router.get("/resources/apis/{category_id}")
+async def get_apis_by_category(category_id: str):
+    """Get APIs for a specific category."""
+    apis_file = DATA_DIR / "public_apis" / "categories.json"
+    if apis_file.exists():
+        with open(apis_file) as f:
+            data = json.load(f)
+            for cat in data.get("categories", []):
+                if cat["id"] == category_id:
+                    return cat
+    raise HTTPException(status_code=404, detail="Category not found")
+
+
+@api_router.get("/resources/templates")
+async def get_llm_templates():
+    """Get LLM app templates inspired by awesome-llm-apps."""
+    templates_file = DATA_DIR / "llm_templates" / "app_templates.json"
+    if templates_file.exists():
+        with open(templates_file) as f:
+            return json.load(f)
+    return {"templates": [], "meta": {}}
+
+
+@api_router.get("/resources/templates/{template_id}")
+async def get_template_by_id(template_id: str):
+    """Get a specific LLM app template."""
+    templates_file = DATA_DIR / "llm_templates" / "app_templates.json"
+    if templates_file.exists():
+        with open(templates_file) as f:
+            data = json.load(f)
+            for template in data.get("templates", []):
+                if template["id"] == template_id:
+                    return template
+    raise HTTPException(status_code=404, detail="Template not found")
+
+
+# ============== Permanent API Key Storage ==============
+
+class ApiKeyConfig(BaseModel):
+    provider: str
+    api_key: str
+    is_default: bool = False
+
+
+@api_router.get("/config/api-keys")
+async def get_api_keys(request: Request):
+    """Get stored API keys (masked)."""
+    user = await require_auth(request)
+    
+    keys = await db.api_keys.find({"user_id": user["user_id"]}).to_list(100)
+    
+    # Mask the keys for security
+    masked_keys = []
+    for key in keys:
+        masked_keys.append({
+            "provider": key["provider"],
+            "api_key": key["api_key"][:8] + "..." + key["api_key"][-4:] if len(key.get("api_key", "")) > 12 else "***",
+            "is_default": key.get("is_default", False),
+            "created_at": key.get("created_at")
+        })
+    
+    return {"keys": masked_keys}
+
+
+@api_router.post("/config/api-keys")
+async def save_api_key(request: Request, config: ApiKeyConfig):
+    """Save an API key permanently for a provider."""
+    user = await require_auth(request)
+    
+    # If setting as default, unset other defaults for this provider
+    if config.is_default:
+        await db.api_keys.update_many(
+            {"user_id": user["user_id"], "provider": config.provider},
+            {"$set": {"is_default": False}}
+        )
+    
+    # Upsert the key
+    await db.api_keys.update_one(
+        {"user_id": user["user_id"], "provider": config.provider, "api_key": config.api_key},
+        {"$set": {
+            "user_id": user["user_id"],
+            "provider": config.provider,
+            "api_key": config.api_key,
+            "is_default": config.is_default,
+            "updated_at": datetime.now(timezone.utc).isoformat()
+        },
+        "$setOnInsert": {
+            "created_at": datetime.now(timezone.utc).isoformat()
+        }},
+        upsert=True
+    )
+    
+    return {"ok": True, "message": f"API key saved for {config.provider}"}
+
+
+@api_router.delete("/config/api-keys/{provider}")
+async def delete_api_key(request: Request, provider: str):
+    """Delete stored API key for a provider."""
+    user = await require_auth(request)
+    
+    result = await db.api_keys.delete_many({"user_id": user["user_id"], "provider": provider})
+    
+    if result.deleted_count > 0:
+        return {"ok": True, "message": f"API key deleted for {provider}"}
+    raise HTTPException(status_code=404, detail="No API key found for this provider")
+
+
+@api_router.get("/config/api-keys/{provider}/value")
+async def get_api_key_value(request: Request, provider: str):
+    """Get the actual API key value (for internal use)."""
+    user = await require_auth(request)
+    
+    key = await db.api_keys.find_one({
+        "user_id": user["user_id"],
+        "provider": provider,
+        "is_default": True
+    })
+    
+    if not key:
+        # Try to get any key for this provider
+        key = await db.api_keys.find_one({
+            "user_id": user["user_id"],
+            "provider": provider
+        })
+    
+    if key:
+        return {"provider": provider, "api_key": key["api_key"]}
+    raise HTTPException(status_code=404, detail=f"No API key found for {provider}")
+
+
 # ============== Legacy Status Endpoints ==============
 
 @api_router.post("/status", response_model=StatusCheck)
