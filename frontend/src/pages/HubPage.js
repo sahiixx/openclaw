@@ -69,6 +69,11 @@ export default function HubPage() {
   // Quick chat state
   const [quickChatOpen, setQuickChatOpen] = useState(false);
 
+  // Resources state
+  const [apiCategories, setApiCategories] = useState([]);
+  const [templates, setTemplates] = useState([]);
+  const [resourcesLoading, setResourcesLoading] = useState(false);
+
   useEffect(() => {
     const checkAuth = async () => {
       try {
@@ -88,7 +93,30 @@ export default function HubPage() {
     fetchAgents();
     checkKimiConfig();
     fetchProviders();
+    fetchResources();
   }, [navigate]);
+
+  const fetchResources = async () => {
+    setResourcesLoading(true);
+    try {
+      const [apisRes, templatesRes] = await Promise.all([
+        fetch(`${API}/resources/apis`),
+        fetch(`${API}/resources/templates`)
+      ]);
+      if (apisRes.ok) {
+        const data = await apisRes.json();
+        setApiCategories(data.categories || []);
+      }
+      if (templatesRes.ok) {
+        const data = await templatesRes.json();
+        setTemplates(data.templates || []);
+      }
+    } catch (e) {
+      console.error('Failed to fetch resources:', e);
+    } finally {
+      setResourcesLoading(false);
+    }
+  };
 
   const fetchPersonas = async () => {
     try {
