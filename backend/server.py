@@ -79,7 +79,7 @@ class StatusCheckCreate(BaseModel):
 
 
 class OpenClawStartRequest(BaseModel):
-    provider: str = "emergent"  # "emergent", "anthropic", or "openai"
+    provider: str = "emergent"  # "emergent", "anthropic", "openai", or "groq"
     apiKey: Optional[str] = None  # Optional - uses Emergent key if not provided
 
 
