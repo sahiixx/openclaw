@@ -363,6 +363,9 @@ export default function HubPage() {
             <TabsTrigger value="providers" data-testid="tab-providers" className="data-[state=active]:bg-[#FF4500] data-[state=active]:text-white text-zinc-400">
               LLM Providers
             </TabsTrigger>
+            <TabsTrigger value="resources" data-testid="tab-resources" className="data-[state=active]:bg-[#FF4500] data-[state=active]:text-white text-zinc-400">
+              🔗 Resources
+            </TabsTrigger>
           </TabsList>
 
           {/* ===== PERSONAS TAB ===== */}
