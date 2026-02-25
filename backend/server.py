@@ -639,6 +639,61 @@ def create_moltbot_config(token: str = None, api_key: str = None, provider: str 
             "primary": "anthropic/claude-opus-4-5-20251101"
         }
 
+    elif provider == "groq":
+        # Groq API for ultra-fast inference
+        groq_key = api_key or os.environ.get('GROQ_API_KEY', '')
+        groq_provider = {
+            "baseUrl": "https://api.groq.com/openai/v1/",
+            "apiKey": groq_key,
+            "api": "openai-completions",
+            "models": [
+                {
+                    "id": "llama-3.3-70b-versatile",
+                    "name": "Llama 3.3 70B",
+                    "input": ["text"],
+                    "cost": {"input": 0.00000059, "output": 0.00000079},
+                    "contextWindow": 128000,
+                    "maxTokens": 32768
+                },
+                {
+                    "id": "llama-3.1-8b-instant",
+                    "name": "Llama 3.1 8B Instant",
+                    "input": ["text"],
+                    "cost": {"input": 0.00000005, "output": 0.00000008},
+                    "contextWindow": 128000,
+                    "maxTokens": 8192
+                },
+                {
+                    "id": "mixtral-8x7b-32768",
+                    "name": "Mixtral 8x7B",
+                    "input": ["text"],
+                    "cost": {"input": 0.00000024, "output": 0.00000024},
+                    "contextWindow": 32768,
+                    "maxTokens": 32768
+                },
+                {
+                    "id": "gemma2-9b-it",
+                    "name": "Gemma 2 9B",
+                    "input": ["text"],
+                    "cost": {"input": 0.00000020, "output": 0.00000020},
+                    "contextWindow": 8192,
+                    "maxTokens": 8192
+                }
+            ]
+        }
+
+        existing_config["models"]["providers"]["groq"] = groq_provider
+
+        # Set primary model to Llama 3.3 70B for best quality
+        existing_config["agents"]["defaults"]["models"] = {
+            "groq/llama-3.3-70b-versatile": {"alias": "llama"},
+            "groq/llama-3.1-8b-instant": {"alias": "fast"},
+            "groq/mixtral-8x7b-32768": {"alias": "mixtral"}
+        }
+        existing_config["agents"]["defaults"]["model"] = {
+            "primary": "groq/llama-3.3-70b-versatile"
+        }
+
     with open(CONFIG_FILE, "w") as f:
         json.dump(existing_config, f, indent=2)
 
